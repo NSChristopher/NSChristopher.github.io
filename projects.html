@@ -31,8 +31,8 @@ title: Projects
         <div class="p-4">
           <h4 class="fst-italic">Archives</h4>
           <ol class="list-unstyled mb-0">
-            {% for post in site.posts limit:5 %}
-              <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+            {% for project in site.projects limit:5 %}
+              <li><a href="{{ project.url | relative_url }}">{{ project.title }}</a></li>
             {% endfor %}
           </ol>
         </div>

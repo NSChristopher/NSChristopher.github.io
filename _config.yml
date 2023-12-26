@@ -7,6 +7,9 @@ url: "http://NSChristopher.github.io/" # the base hostname & protocol for your s
 
 # Collections
 collections:
+  posts:
+    output: true
+    permalink: /posts/:path/
   problems:
     output: true
     permalink: /problems/:path/
