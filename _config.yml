@@ -1,0 +1,18 @@
+title: Your Blog's Title
+email: noah.dev@outlook.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Write a short description of your blog here.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://NSChristopher.github.io/" # the base hostname & protocol for your site
+
+# Collections
+collections:
+  problems:
+    output: true
+    permalink: /problems/:path/
+  projects:
+    output: true
+    permalink: /projects/:path/
+  reading-list:
+    output: true
+    permalink: /reading-list/:path/
