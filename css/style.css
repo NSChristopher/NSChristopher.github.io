@@ -1,0 +1,30 @@
+/* Importing the fonts */
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Nunito:wght@400;700&display=swap');
+/* Setting default font for body */
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem; /* Adjust the size as needed */
+  color: #333; /* Default text color */
+}
+
+/* Styling for headers */
+h1, h2, h3, h4, h5, h6, .navbar-brand, .nav-link {
+  font-family: 'PT Serif', serif;
+  font-weight: 700; /* Bold font for headers */
+}
+
+.nav-link {
+  font-size: 1.3rem; /* Increase the font size */
+}
+
+/* Link styling */
+a {
+  color: #000000; /* Default link color */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #151515; /* Color change on hover */
+}
+
+/* Additional styles as needed */
