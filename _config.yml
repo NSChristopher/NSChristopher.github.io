@@ -1,21 +1,32 @@
-title: Your Blog's Title
-email: noah.dev@outlook.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write a short description of your blog here.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://NSChristopher.github.io/" # the base hostname & protocol for your site
+title: Your Site Title
+email: your-email@example.com
+description: >- # This means to ignore newlines until "baseurl:"
+  Write a short description of your site here.
+baseurl: "" # the subpath of your site, e.g., /blog
+url: "https://nschristopher.github.io/" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list to override the default setting.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
 
 # Collections
 collections:
   posts:
     output: true
-    permalink: /posts/:path/
-  problems:
-    output: true
-    permalink: /problems/:path/
   projects:
     output: true
-    permalink: /projects/:path/
-  reading-list:
+  problems:
     output: true
-    permalink: /reading-list/:path/
+  # Add more collections as needed
