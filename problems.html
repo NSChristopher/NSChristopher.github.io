@@ -21,7 +21,6 @@ permalink: /problems/
           <h2 class="blog-post-title mb-1"><a href="{{ problem.url | relative_url }}">{{ problem.title }}</a></h2>
           <p class="blog-post-meta">{{ problem.date | date: "%B %d, %Y" }}</p>
           <p>{{ problem.excerpt }}</p>
-          <a href="{{ problem.url | relative_url }}" class="stretched-link">Continue reading...</a>
         </article>
       {% endfor %}
     </div>

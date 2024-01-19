@@ -29,4 +29,10 @@ collections:
     output: true
   problems:
     output: true
+  reading-blogs:
+    output: true
+  reading-books:
+    output: true
+  reading-papers:
+    output: true
   # Add more collections as needed

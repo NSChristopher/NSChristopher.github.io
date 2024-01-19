@@ -1,0 +1,56 @@
+---
+layout: default
+title: "Reading List"
+permalink: /reading/
+---
+
+<div class="container mt-4">
+  <!-- Reading List -->
+  <section>
+    <h2 class="mb-4">Reading List</h2>
+    <ul class="list-unstyled">
+      <li>Deep Learning with Python</li>
+      <li>Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow</li>
+      <li>Machine Learning Engineering</li>
+      <!-- ... other books ... -->
+    </ul>
+  </section>
+
+  <!-- Articles and Papers -->
+  <section>
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="mb-4">Articles</h2>
+        {% for blog in site.reading-blogs %}
+          <article class="blog-post mb-4">
+            <h4 class="blog-post-title mb-1"><a href="{{ blog.url }}">{{ blog.title }}</a></h4>
+            <p class="blog-post-meta">Author: {{ blog.author }} | Read: {{ blog.read-on | date: "%b %d, %Y" }} | <a href="{{ blog.link }}" >Read Article</a></p>
+            <p>{{ blog.excerpt }}</p>
+          </article>
+        {% endfor %}
+      </div>
+      <div class="col-md-6">
+        <h2 class="mb-4">Papers</h2>
+        {% for paper in site.reading-papers %}
+          <article class="blog-post mb-4">
+            <h4 class="blog-post-title mb-1"><a href="{{ paper.url }}">{{ paper.title }}</a></h4>
+            <p class="blog-post-meta">Author: {{ paper.author }} | Read: {{ paper.read-on | date: "%b %d, %Y" }} | <a href="{{ paper.link }}" >Read Paper</a></p>
+            <p>{{ paper.excerpt }}</p>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Books -->
+  <section>
+    <h2 class="mb-4">Books</h2>
+    {% for book in site.reading-books %}
+      <article class="blog-post mb-4">
+        <h4 class="blog-post-title mb-1"><a href="{{ book.url }}">{{ book.title }}</a></h4>
+        <p class="blog-post-meta">Author: {{ book.author }} | Read: {{ book.read-on | date: "%b %d, %Y" }} | <a href="{{ book.link }}" >Read Book</a></p>
+        <p>{{ book.excerpt }}</p>
+      </article>
+    {% endfor %}
+  </section>
+</div>
