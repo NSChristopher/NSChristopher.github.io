@@ -14,16 +14,21 @@ permalink: /projects/
   </div>
 
   <!-- Projects List and Archives Sidebar -->
-  <div class="row g-5">
-    <div class="col-md-8">
-      {% for project in site.projects %}
-        <article class="blog-post">
-          <h2 class="blog-post-title mb-1"><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>
-          <p class="blog-post-meta">{{ project.date | date: "%B %d, %Y" }}</p>
-          <p>{{ project.excerpt }}</p>
-        </article>
-      {% endfor %}
-    </div>
+  <div class="col-md-8">
+    {% assign projs = site.projects | sort: 'start_date' | reverse %}
+    {% for project in projs %}
+      <article class="blog-post">
+        <h2 class="blog-post-title mb-1">
+          <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+        </h2>
+        <p class="blog-post-meta">
+          Started {{ project.start_date | date: "%b %d, %Y" }}
+          {% if project.status %} | Status: {{ project.status }}{% endif %}
+        </p>
+        <p>{{ project.description }}</p>
+      </article>
+    {% endfor %}
+  </div>
 
     <!-- Archives Sidebar -->
     <div class="col-md-4">
