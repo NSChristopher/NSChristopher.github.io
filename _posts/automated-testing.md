@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Github Actions"
+title:  "Automated Testing"
 date:   2023-12-20 12:13:35
 project: pick-a-date
 ---
