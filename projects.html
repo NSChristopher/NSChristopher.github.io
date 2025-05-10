@@ -14,29 +14,30 @@ permalink: /projects/
   </div>
 
   <!-- Projects List and Archives Sidebar -->
-  <div class="col-md-8">
-    {% assign projs = site.projects | sort: 'start_date' | reverse %}
-    {% for project in projs %}
-      <article class="blog-post">
-        <h2 class="blog-post-title mb-1">
-          <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
-        </h2>
-        <p class="blog-post-meta">
-          Started {{ project.start_date | date: "%b %d, %Y" }}
-          {% if project.status %} | Status: {{ project.status }}{% endif %}
-        </p>
-        <p>{{ project.description }}</p>
-      </article>
-    {% endfor %}
-  </div>
+  <div class="row g-5">
+    <div class="col-md-8">
+      {% assign projs = site.projects | sort: 'start_date' | reverse %}
+      {% for project in projs %}
+        <article class="blog-post">
+          <h2 class="blog-post-title mb-1">
+            <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+          </h2>
+          <p class="blog-post-meta">
+            Started {{ project.start_date | date: "%b %d, %Y" }}
+            {% if project.status %} | Status: {{ project.status }}{% endif %}
+          </p>
+          <p>{{ project.description }}</p>
+        </article>
+      {% endfor %}
+    </div>
 
-    <!-- Archives Sidebar -->
     <div class="col-md-4">
       <div class="position-sticky" style="top: 2rem;">
         <div class="p-4">
           <h4 class="fst-italic">Archives</h4>
           <ol class="list-unstyled mb-0">
-            {% for project in site.projects limit:5 %}
+            {% assign recent = site.projects | sort: 'start_date' | reverse %}
+            {% for project in recent limit:5 %}
               <li><a href="{{ project.url | relative_url }}">{{ project.title }}</a></li>
             {% endfor %}
           </ol>
