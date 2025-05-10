@@ -1,0 +1,50 @@
+---
+# no front‑matter needed here; Jekyll will inject the project’s data
+---
+
+<article class="project-overview">
+  <h1>{{ page.title }}</h1>
+  <p><strong>Start:</strong> {{ page.start_date | date: "%B %d, %Y" }}</p>
+  {% if page.status %}
+    <p><strong>Status:</strong> {{ page.status }}</p>
+  {% endif %}
+
+  {% if page.description %}
+    <section>
+      <h2>Description</h2>
+      {{ page.description }}
+    </section>
+  {% endif %}
+
+  {% if page.milestones %}
+    <section>
+      <h2>Milestones</h2>
+      <ul>
+        {% for m in page.milestones %}
+          <li>
+            <strong>{{ m.date | date: "%b %d, %Y" }}</strong>:
+            {{ m.title }}
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+
+  <section>
+    <h2>Related Posts</h2>
+    <ul>
+      {% assign pid = page.slug %}
+      {% for post in site.posts %}
+        {% if post.project == pid %}
+          <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            <small>({{ post.date | date: "%b %d, %Y" }})</small>
+          </li>
+        {% endif %}
+      {% endfor %}
+      {% if forloop.length == 0 %}
+        <li><em>No posts yet for this project.</em></li>
+      {% endif %}
+    </ul>
+  </section>
+</article>
