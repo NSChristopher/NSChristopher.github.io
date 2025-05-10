@@ -5,27 +5,38 @@ title: "NSChristopher"
 
 <!-- Full‑width section with inline background -->
 <section style="
-  background: url('{{ '/assets/background.JPG' | relative_url }}') center center / cover no-repeat;
+  background: url('{{ '/assets/hero-bg.jpg' | relative_url }}') 
+              center center / cover no-repeat;
+  /* pull it up 56px (approx your header height) */
+  margin-top: -56px;            
+  /* extra space above the hero card */
+  padding-top: 12rem;           
+  /* extra space below the hero card */
+  padding-bottom: 8rem;         
 ">
   <div class="container">
     <div class="p-5 mb-4 text-white rounded bg-dark">
       <div class="row align-items-center">
-        <!-- Left: Title & Tagline -->
         <div class="col-md-8">
           <h1 class="display-4 fst-italic">Journey in ML</h1>
-          <p class="lead">Software Developer &amp; Machine Learning student, structuring ideas into code and insights.</p>
+          <p class="lead">
+            Software Developer &amp; Machine Learning student, structuring ideas into code and insights.
+          </p>
         </div>
-        <!-- Right: Avatar & Contact -->
         <div class="col-md-4 text-center">
-          <img src="{{ '/assets/avatar.jpg' | relative_url }}"
-               alt="Noah Christopher"
-               class="rounded-circle border border-light mb-3"
-               style="width:150px; height:150px; object-fit:cover;">
+          <img
+            src="{{ '/assets/avatar.jpg' | relative_url }}"
+            alt="Noah Christopher"
+            class="rounded-circle border border-light mb-3"
+            style="width:150px; height:150px; object-fit:cover;"
+          />
           <p class="mb-1">noah.dev@outlook.com</p>
           <p>
-            <a href="{{ '/assets/NSChristopher_Resume.pdf' | relative_url }}"
-               target="_blank"
-               class="btn btn-outline-light btn-sm">
+            <a
+              href="{{ '/assets/NSChristopher_Resume.pdf' | relative_url }}"
+              target="_blank"
+              class="btn btn-outline-light btn-sm"
+            >
               View Resume
             </a>
           </p>
