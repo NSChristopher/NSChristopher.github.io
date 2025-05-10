@@ -3,15 +3,35 @@ layout: default
 title: "NSChristopher"
 ---
 
-<!-- Hero Section -->
-<div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
-  <div class="col-md-6 px-0">
-    <h1 class="display-4 fst-italic">Journey in ML</h1>
-    <p class="lead my-3">This blog represents my personal journey into the world of Machine Learning. The goal is to bring structure and clarity to my thoughts while providing useful content for other learners.</p>
+<!-- Hero Section with Integrated Bio -->
+<div class="p-5 mb-4 text-white rounded bg-dark">
+  <div class="row align-items-center">
+    <!-- Text & Contact -->
+    <div class="col-md-8">
+      <h1 class="display-4 fst-italic">Journey in ML</h1>
+      <p class="lead">Software Developer &amp; Machine Learning student, structuring ideas into code and insights. Welcome to my learning journey.</p>
+      <!-- Contact Links -->
+      <div class="mt-3">
+        <a href="mailto:noah@example.com" class="me-3 text-white text-decoration-none">
+          <i class="bi bi-envelope-fill"></i> noah@example.com
+        </a>
+        <a href="https://github.com/NSChristopher" class="me-3 text-white text-decoration-none">
+          <i class="bi bi-github"></i> GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/noah-christopher-29549a207/" class="text-white text-decoration-none">
+          <i class="bi bi-linkedin"></i> LinkedIn
+        </a>
+      </div>
+    </div>
+
+    <!-- Avatar -->
+    <div class="col-md-4 text-center">
+      <img src="{{ '/assets/avatar.jpg' | relative_url }}" alt="Noah Christopher" class="rounded-circle border border-light" style="width: 150px; height: 150px; object-fit: cover;">
+    </div>
   </div>
 </div>
 
-<!-- Main Content -->
+<!-- Main Content: Posts & Archives -->
 <div class="row g-5">
   <!-- Blog Posts -->
   <div class="col-md-8">
@@ -24,20 +44,9 @@ title: "NSChristopher"
     {% endfor %}
   </div>
 
-  <!-- Sidebar Bio & Archives -->
+  <!-- Sidebar Archives -->
   <aside class="col-md-4">
     <div class="position-sticky" style="top: 2rem;">
-      <!-- About Me Card -->
-      <div class="card text-center border-0 shadow-sm mb-4">
-        <img src="{{ '/assets/avatar.jpg' | relative_url }}" alt="Noah Christopher" class="card-img-top rounded-circle mx-auto mt-3" style="width: 140px; height: 140px; object-fit: cover;">
-        <div class="card-body">
-          <h5 class="card-title">Noah Christopher</h5>
-          <p class="card-text">Software Developer & Machine Learning student. Passionate about data-driven insights and elegant code.</p>
-          <a href="{{ '/assets/NSChristopher_Resume.pdf' | relative_url }}" class="btn btn-outline-primary btn-sm" target="_blank">View Resume</a>
-        </div>
-      </div>
-
-      <!-- Archives -->
       <div class="mb-4">
         <h4 class="fst-italic">Archives</h4>
         <ol class="list-unstyled mb-0">
