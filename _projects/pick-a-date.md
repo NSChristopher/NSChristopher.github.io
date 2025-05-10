@@ -9,6 +9,8 @@ description: >
   visualize progress, and collaborate in real time.
 
 milestones:
+  - date: 2025-06-01
+    title: "Design sketches done"
 
 # (optional) also tag it for easier filtering
 tags: []
