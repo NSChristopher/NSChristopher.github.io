@@ -3,45 +3,49 @@ layout: default
 title: "NSChristopher"
 ---
 
-<!-- Author Section -->
+<!-- Hero Section -->
 <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
   <div class="col-md-6 px-0">
     <h1 class="display-4 fst-italic">Journey in ML</h1>
-    <p class="lead my-3">This blog represents my personal journey into the world of Machine Learning. The goal of which is to bring structure and clarity to my internal thoughts and ideas, while hopefully providing useful content for other learners.</p>
+    <p class="lead my-3">This blog represents my personal journey into the world of Machine Learning. The goal is to bring structure and clarity to my thoughts while providing useful content for other learners.</p>
   </div>
 </div>
 
-<!-- Blog Posts and Sidebar -->
+<!-- Main Content -->
 <div class="row g-5">
   <!-- Blog Posts -->
   <div class="col-md-8">
     {% for post in site.posts %}
       <article class="blog-post mb-4">
-        <h2 class="blog-post-title mb-1"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-        <p class="blog-post-meta">{{ post.date | date: "%B %d, %Y" }}</a></p>
+        <h2 class="blog-post-title mb-1"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        <p class="blog-post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
         <p>{{ post.excerpt }}</p>
       </article>
     {% endfor %}
   </div>
 
-  <!-- Sidebar -->
-  <div class="col-md-4">
-    <!-- About Section
+  <!-- Sidebar Bio & Archives -->
+  <aside class="col-md-4">
     <div class="position-sticky" style="top: 2rem;">
-      <div class="p-4 mb-3">
-        <h4 class="fst-italic">About</h4>
-        <p class="mb-0">This blog represents my personal journey into the world of Machine Learning. The goal of which is to bring structure and clarity to my internal thoughts and ideas, while hopefully providing useful content for other learners.</p>
-      </div> -->
+      <!-- About Me Card -->
+      <div class="card text-center border-0 shadow-sm mb-4">
+        <img src="{{ '/assets/avatar.jpg' | relative_url }}" alt="Noah Christopher" class="card-img-top rounded-circle mx-auto mt-3" style="width: 140px; height: 140px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title">Noah Christopher</h5>
+          <p class="card-text">Software Developer & Machine Learning student. Passionate about data-driven insights and elegant code.</p>
+          <a href="{{ '/assets/NSChristopher_Resume.pdf' | relative_url }}" class="btn btn-outline-primary btn-sm" target="_blank">View Resume</a>
+        </div>
+      </div>
 
       <!-- Archives -->
-      <div class="p-4">
+      <div class="mb-4">
         <h4 class="fst-italic">Archives</h4>
         <ol class="list-unstyled mb-0">
           {% for post in site.posts limit:5 %}
-            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+            <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
           {% endfor %}
         </ol>
       </div>
     </div>
-  </div>
+  </aside>
 </div>
